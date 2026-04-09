@@ -1,0 +1,14 @@
+[project]
+name = "repo-radar"
+version = "0.1.0"
+description = "CLI utilities for screening repositories and task viability"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "Zhenhua Wang" }]
+
+[project.scripts]
+repo-radar = "repo_radar.cli:main"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
