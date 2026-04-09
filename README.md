@@ -37,6 +37,50 @@ repo-radar --has-readme --recently-updated --has-issues --has-ci-hint
 
 ---
 
+## Installation
+```bash
+pip install -e .
+```
+
+Or run directly from source with:
+
+```bash
+PYTHONPATH=src python3 -m repo_radar.cli ...
+```
+
+## Quickstart
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/wzh886/repo-radar.git
+cd repo-radar
+```
+
+### 2. Run locally
+```bash
+PYTHONPATH=src python3 -m repo_radar.cli \
+  --has-readme \
+  --recently-updated \
+  --has-issues \
+  --has-ci-hint
+```
+
+### 3. Install as a local CLI (optional)
+```bash
+pip install -e .
+repo-radar --has-readme --recently-updated --has-issues --has-ci-hint
+```
+
+## Sample output
+```bash
+$ repo-radar --has-readme --recently-updated --has-issues --has-ci-hint
+100
+```
+
+A higher score suggests stronger baseline signals for investing engineering time.
+
+---
+
 ## Roadmap
 ### v0.1
 - [x] basic repository scoring model
